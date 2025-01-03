@@ -184,7 +184,7 @@ header {
     color: #f09000;
 }
 
-.navbar-right a
+.navbar-right a{
     max-width: 100%;
     width: 100%;
     box-sizing: border-box;
