@@ -31,8 +31,10 @@
     </div>
   </header>
   <nav class="navbar">
-
-    <ul>
+    <div class="nav-toggle" onclick="toggleMenu()">
+  &#9776;
+</div>
+     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="Services.html">Services</a></li>
       <li><a href="Doctors.html">Doctors & Specialists</a></li>
@@ -42,62 +44,46 @@
 
 
   <main>
-    <section class="section">
-      <img src=Images/oldmaledoctor.png>
+  <section class="section">
+    <img src="Images/oldmaledoctor.png" alt="Old male doctor">
+    <p>
+      Welcome to St. Mathew's Hospital, where compassionate care meets medical excellence.
+      Our dedicated team of professionals is here to support you on every step of your health journey,
+      offering advanced treatment and personalized care in a warm, welcoming environment.
+      Whether you are here for routine checkups or specialized services,
+      you can trust us to provide the highest standard of healthcare, tailored to your unique needs.
+      Because at St. Mathew's, your well-being is at the heart of everything we do.
+    </p>
+  </section>
 
-      <P>Welcome to st. Mathew's Hospital, where compassionate care meets medical excellence.
-        Our dedicated team of professionals is here to support you on every step of your health journey,
-        offering advanced treatment and personalized care in a warm, welcoming environment.
-        Whether you are here for routine checkups or specialized services,
-        you can trust us to provide the highest standard of healthcare, tailored to your unique needs.
-        Because at [Hospital Name], your well-being is at the heart of everything we do.
-      </P>
-    </section>
+  <article class="article">
+    <img src="Images/female-pediatrician-sitting.jpg" alt="Female pediatrician">
+    <h2>Mission</h2>
+    <p>
+      At St. Mathew's Hospital, our mission is to provide exceptional,
+      compassionate healthcare that meets the diverse needs of our community.
+      We are dedicated to enhancing the well-being of every patient by
+      delivering advanced medical care, fostering healing environments,
+      and inspiring hope. Through a commitment to excellence, innovation,
+      and respect, we aim to be a trusted partner in our patients' health
+      journeys, ensuring access to quality care for all.
+    </p>
+  </article>
 
-    <article class="article">
-      <img src=Images/female-pediatrician-sitting.jpg>
+  <aside class="aside">
+    <img src="Images/nurse_dau_mother.jpg" alt="Nurse with mother and daughter">
+    <h2>Values</h2>
+    <p>
+      <strong>Compassion:</strong> We treat every patient with empathy, kindness, and respect.<br><br>
+      <strong>Excellence:</strong> We strive for the highest standards in healthcare.<br><br>
+      <strong>Integrity:</strong> We foster trust through transparency and accountability.<br><br>
+      <strong>Collaboration:</strong> We work as a unified team for comprehensive care.<br><br>
+      <strong>Innovation:</strong> We embrace new technologies and ideas.<br><br>
+      <strong>Community Commitment:</strong> We promote preventive care and support public health.
+    </p>
+  </aside>
+</main>
 
-      <h2>Mission</h2>
-
-      <p>At St. Mathews Hospital, our mission is to provide exceptional,
-        compassionate healthcare that meets the diverse needs of our community.
-        We are dedicated to enhancing the well-being of every patient by
-        delivering advanced medical care,fostering healing environments,
-        and inspiring hope.Through a commitment to excellence, innovation,
-        and respect,we aim to be a trusted partner in our patients' health
-        journeys, ensuring access to quality care for all. </p>
-    </article>
-
-
-    <aside class="aside">
-      <img src=Images/nurse_dau_mother.jpg>
-      <h2>Values</h2>
-
-      <p>Compassion
-        We treat every patient with empathy, kindness, and respect,
-        recognizing the dignity of each individual and creating a supportive environment for healing.
-
-        Excellence
-        We strive for the highest standards in all areas of healthcare,
-        continuously advancing our practices and services to deliver exceptional patient outcomes.
-
-        Integrity
-        We adhere to the highest ethical standards,
-        fostering trust through transparency, accountability, and honesty in all interactions.
-
-        Collaboration
-        We work as a unified team—valuing the skills and
-        contributions of each team member—to provide coordinated, comprehensive care.
-
-        Innovation
-        We embrace cutting-edge technology and innovative approaches in healthcare to enhance the quality
-        efficiency, and accessibility of our services.
-
-        Community Commitment
-        We are deeply invested in the health and well-being of our community,
-        promoting preventive care and offering support to build a healthier future for all.</p>
-    </aside>
-  </main>
 
   <footer>
 
@@ -130,6 +116,14 @@
       </div>
     </div>
   </footer>
+
+  <script>
+  function toggleMenu() {
+    const nav = document.querySelector('.navbar ul');
+    nav.classList.toggle('show');
+  }
+</script>
+
 </body>
 
 </html>

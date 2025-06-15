@@ -22,23 +22,19 @@
         </div>
       </header>
     <nav class="navbar">
-
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Services.html">Services</a></li>
-            <li><a href="Doctors.html">Doctors & Specialists</a></li>
-            <li><a href="contact.html">Contact Information</a></li>
-          </ul>
-        </nav>
-    </nav>
-
-    <center>
-
-
-        <center>
-            <h2>Contact Us</h2>
-        </center>
-
+    <div class="nav-toggle" onclick="toggleMenu()">
+  &#9776;
+</div>
+     <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Services.html">Services</a></li>
+      <li><a href="Doctors.html">Doctors & Specialists</a></li>
+      <li><a href="contact.html">Contact Information</a></li>
+    </ul>
+  </nav>
+      <div class="contact center">
+                      
+             <h1 class="hi_contact"> Contact US </h1>
 
         <div class="icons">
             <i class="fa-sharp-duotone fa-solid fa-phone"></i>
@@ -68,13 +64,11 @@
             <h3>Our Address</h3>
             <p>St,Mathews Hospital Opp. Konark Pooram,<br> Kondhwa (K) Pune 411 048, <br>Maharashtra, India</p>
         </div>
-    </center>
+ 
 
-    <center>
+  
 
-        <center>
-            <h2>Send Enquiry</h2>
-        </center>
+       
         <div class="form">
             <form method="POST">
 
@@ -102,9 +96,9 @@
 
             </form>
         </div>
-    </center>
+   
 
-    
+    </div>
 
 
     <footer>
@@ -138,6 +132,13 @@
         </div>
       </div>
     </footer>
+    
+    <script>
+  function toggleMenu() {
+    const nav = document.querySelector('.navbar ul');
+    nav.classList.toggle('show');
+  }
+</script>
 </body>
 
 </html>

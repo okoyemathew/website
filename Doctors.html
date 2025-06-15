@@ -2,41 +2,47 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/972271e6c1.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
-  <title>Doctors</title>
+  <title>
+    St.Mathews hospital
+  </title>
 </head>
 
 <body>
-
+<script src="index.js"></script>
   <header>
     <img class="my-logo" src="Images/Modern Medical Logo.jpg">
     <div>
       <h1>Welcome to St. Matthew's Hospital</h1>
       <h1>Total Health Care Solution</h1>
-      <strong>St.Matthew's Multispeciality Hospital is a 30 bedded hospital spread over 10000 Sq.
+      <strong>St. Matthew's Multispeciality Hospital is a 30 bedded hospital spread over 10000 Sq.
         Ft having semi Private, Private (AC) rooms,
         Luxury (AC) rooms & 6 bedded ICU with modern facilities.
       </strong>
     </div>
   </header>
-  <nav class="navbar">
-
-    <ul>
+ <nav class="navbar">
+    <div class="nav-toggle" onclick="toggleMenu()">
+  &#9776;
+</div>
+     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="Services.html">Services</a></li>
       <li><a href="Doctors.html">Doctors & Specialists</a></li>
       <li><a href="contact.html">Contact Information</a></li>
     </ul>
   </nav>
-  </nav>
 
-  <center class="servicecenter">
+  <center class="servicecenter" >
 
     <center>
       <h2>Our Doctors And Specialists</h2>
@@ -129,6 +135,13 @@
       </div>
     </div>
   </footer>
+
+  <script>
+  function toggleMenu() {
+    const nav = document.querySelector('.navbar ul');
+    nav.classList.toggle('show');
+  }
+</script>
 </body>
 
 </html>

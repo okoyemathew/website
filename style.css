@@ -1,3 +1,9 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
 .my-logo {
   border: 1px solid color(srgb rgb(11, 10, 10) green blue);
   width: 45px;
@@ -36,6 +42,36 @@ header {
     padding: 10px;
   }
 }
+
+/* Hide toggle by default */
+.nav-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 10px;
+}
+
+/* Mobile Navigation */
+@media screen and (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #003366;
+  }
+
+  .navbar ul.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+    text-align: right;
+  }
+
+}
+
 
 .navbar ul {
   background-color: rgb(156, 158, 160);
@@ -202,36 +238,55 @@ body {
 }
 
 main {
-  display: flex;
-  gap: 20px;
-  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  padding: 40px;
   margin-bottom: 100px;
-  padding-bottom: 150px;
+  box-sizing: border-box;
 }
 
 main > * {
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #f9f9f9; /* Optional: soft background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 main img {
   max-width: 100%;
   height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+main h2 {
+  margin-top: 10px;
   margin-bottom: 10px;
+  color: #2c3e50;
+  font-size: 1.5rem;
+}
+
+main p {
+  text-align: justify;
+  color: #444;
+  line-height: 1.6;
 }
 
 footer {
   display: block;
   height: auto;
   min-height: 0;
-  position: fixed;
-  bottom: 0;
+  position: relative;
+  bottom: unset;
+  margin-top: 40px;
   width: 100%;
   clear: both;
   background-color: #003366;
-  padding: auto;
+  padding: 20px;
   list-style-type: none;
   text-align: center;
 }
@@ -251,7 +306,7 @@ footer {
   background-color: #003366;
   display: inline-block;
   text-align: center;
-  margin: 7px;
+  margin: 3px;
   border-radius: 5px;
   text-wrap: 32px;
   vertical-align: right;
@@ -281,8 +336,8 @@ footer {
   background-color: #003366;
   display: inline-flex;
   text-align: center;
-  padding: 20px;
-  padding-top: 7px;
+  padding: 10px;
+  padding-top: 4px;
   padding-bottom: 7px;
   margin: auto;
   width: 70px;
@@ -301,7 +356,7 @@ footer {
 @media screen and (max-width: 768px) {
   footer {
     font-size: 14px;
-    padding: 10px;
+   
   }
 }
 
@@ -440,7 +495,7 @@ center h2 {
   border: 24px block black;
   padding: 60px;
   padding-bottom: 100px;
-  margin: 1px;
+  margin: 40px auto 100px;
   margin-bottom: 150px;
   display: inline-flex;
   flex-wrap: wrap;
@@ -476,4 +531,109 @@ aside li,
 article li,
 section li {
   color: #0d47a1;
+}
+/* CONTACT CENTER GRID LAYOUT */
+.contact.center {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  justify-content: center;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Make the FORM span the full width and move to next row */
+.form {
+  grid-column: 1 / -1;
+  margin-top: 40px;
+  padding: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hi_contact {
+  grid-column: 1 / -1; /* Span entire grid width */
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #003366;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+/* more responsive  */
+@media screen and (max-width: 992px) {
+  .contact.center {
+    grid-template-columns: 1fr; /* Stack icons & form */
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .form {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .hi_contact {
+    font-size: 1.8rem;
+    padding: 10px 0;
+  }
+
+  .my-logo {
+    width: 60px;
+    height: auto;
+  }
+
+  .footer-left,
+  .footer-right,
+  .footer-nav,
+  .mail,
+  .icon2 {
+    max-width: 90%;
+    margin: 10px auto;
+  }
+
+  .mail {
+    left: unset;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .form input[type="text"],
+  .form input[type="email"],
+  .form textarea {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1, h2, h3 {
+    font-size: 1.2rem;
+  }
+
+  .navbar li {
+    float: none;
+    width: 100%;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .footer-nav a {
+    display: block;
+    padding: 10px 0;
+  }
+
+  .services {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
 }
